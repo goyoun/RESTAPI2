@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+  datasource:
+    url: jdbc:mysql://localhost:3306/EXAMPLE
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties.hibernate.hbm2ddl.auto: update
+    showSql: true
+  mvc:
+    pathmatch:
+     matching-strategy: ant_path_matcher
+  message:
+    basename: i18n/exception
+    encoding: UTF-8
